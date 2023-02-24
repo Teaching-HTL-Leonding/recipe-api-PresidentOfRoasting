@@ -1,0 +1,62 @@
+POST http://localhost:5178/recipes
+Content-Type: application/json
+
+{
+    "name": "Pancakes",
+    "description": "Delicious pancakes",
+    "ingredients": [
+        {
+        "name": "Flour",
+        "quantity": 1,
+        "unit": "cup"
+        },
+        {
+        "name": "Milk",
+        "quantity": 1,
+        "unit": "cup"
+        },
+        {
+        "name": "Eggs",
+        "quantity": 2,
+        "unit": "large"
+        }
+    ]
+}
+
+###
+GET http://localhost:5178/recipes/1
+
+###
+DELETE http://localhost:5178/recipes/1
+
+###
+PUT http://localhost:5178/recipes/1
+Content-Type: application/json
+
+{
+    "name": "Pancakes",
+    "description": "Delicious pancakes",
+    "ingredients": [
+        {
+        "name": "Flour",
+        "quantity": 1,
+        "unit": "cup"
+        },
+        {
+        "name": "Milk",
+        "quantity": 1,
+        "unit": "cup"
+        },
+        {
+        "name": "Eggs",
+        "quantity": 2,
+        "unit": "large"
+        }
+    ]
+}
+
+###
+GET http://localhost:5178/recipes/search?name=pancakes
+
+###
+GET http://localhost:5178/recipes/search?name=pancakes&description=delicious
